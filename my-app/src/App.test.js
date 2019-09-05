@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import 'jest-dom/extend-expect';
-import 'react-testing-library/cleanup-after-each';
+import Dashboard from "./components/Dashboard";
+import Display from "./components/Display";
+
+import { strikes, setStrikes, balls, setBalls , addStrike, addBall, addFoul, Hit} from './App';
+  
+
+
 
 
 
@@ -12,4 +17,8 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test("")
+test('Dashboard is working', () => {
+  const div = document.createElement('div');
+ ReactDOM.render(<Dashboard />, div);
+})
+

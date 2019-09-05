@@ -53,8 +53,8 @@ const addFoul = () => {
       <header className="App-header">
      
            <Display balls={balls} strikes={strikes} />
-           <DashBoard  addStrike ={addStrike} addBall ={addBall} addFoul={addFoul} Hit = {Hit}
-           />
+           <DashBoard  addStrike ={addStrike} addBall ={addBall} addFoul={addFoul} Hit = {Hit} />
+           
        
       </header>
     </div>
