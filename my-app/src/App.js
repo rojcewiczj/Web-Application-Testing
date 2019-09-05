@@ -15,7 +15,8 @@ import DashBoard from "./components/Dashboard"
 
 
 
-function App() {const [balls, setBalls] = useState(0);
+function App() 
+{const [balls, setBalls] = useState(0);
 const [strikes, setStrikes] = useState(0);
 
 const addStrike = () => {
@@ -26,24 +27,25 @@ else if ( strikes > 2) {
    setStrikes(strikes - 3);
 }
 };
- const addBall () {
-  if( currentValue < 4) {
-    return currentValue + 1
+ const addBall = () => {
+  if( balls < 4) {
+    setBalls(balls + 1)
   }
-  else if (currentValue > 3) {
-    return currentValue = 0;
+  else if (balls > 3) {
+    setBalls(balls - 4);
   }
   };
-const addFoul = currentValue => {
-    if( currentValue < 2) {
-      return currentValue + 1
+const addFoul = () => {
+    if( strikes < 2) {
+      setStrikes(strikes + 1)
     }
-    else if (currentValue >= 2) {
-      return currentValue + 0;
+    else if (strikes >= 2) {
+      setStrikes (strikes + 0);
     }
     };
-   const hit = currentValue => {
-     return currentValue = 0;
+   const Hit = ()=> {
+     setStrikes(0);
+     setBalls(0);
     };
 
   return (
@@ -51,7 +53,7 @@ const addFoul = currentValue => {
       <header className="App-header">
      
            <Display balls={balls} strikes={strikes} />
-           <DashBoard  addStrike ={addStrike} addball ={addBall} addFoul={addFoul} hit = {hit}
+           <DashBoard  addStrike ={addStrike} addBall ={addBall} addFoul={addFoul} Hit = {Hit}
            />
        
       </header>

@@ -9,15 +9,15 @@ return (
                 Ball!
             </button>
             <button className="strike-button" data-testid="strike-button"
-            onClick={ props.addStrike}>
+            onClick={props.addStrike}>
                 Strike!
             </button>
             <button className="foul-button" data-testid="foul-button"
-            onClick={() =>props.addFoul}>
+            onClick={props.addFoul}>
                Foul!
             </button>
             <button className="hit-button" data-testid="hit-button"
-            onClick={() => props.addHit}>
+            onClick={props.Hit}>
                Hit!
             </button>
 
