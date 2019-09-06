@@ -27,7 +27,14 @@ else if (testBalls > 2 ){
  return (testBalls - 4);
 }
 };
-
+export const testAddFoul = () => {
+  if( testStrikes < 2) {
+    return testStrikes + 1
+  }
+  else if (testStrikes >= 2) {
+    return testStrikes ;
+  }
+  };
 
 
 function App (){

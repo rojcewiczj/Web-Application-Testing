@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Dashboard from "./components/Dashboard";
 import Display from "./components/Display";
-import {testBalls,testStrikes, testAddToStrike, testAddToBalls } from './App'
+import {testBalls,testStrikes, testAddToStrike, testAddToBalls, testAddFoul } from './App'
 import expectExport from 'expect';
 
 
 
 
 
-test('renders without crashing', (props) => {
+it('renders without crashing', (props) => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
@@ -28,4 +28,8 @@ test("add to strike function", () => {
 
 test("add to ball function", () => {
   expect(testAddToBalls()).toBe(0)
+})
+
+test("add to foul function", () => {
+ expect(testAddFoul()).toBe(3)
 })
