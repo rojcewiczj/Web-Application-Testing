@@ -20,6 +20,10 @@ return (
             onClick={props.Hit}>
                Hit!
             </button>
+            <button className="hit-button" data-testid="hit-button"
+            onClick={props.addInning}>
+               Next Inning!
+            </button>
 
         
     </div>

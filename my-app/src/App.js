@@ -36,6 +36,9 @@ export const testAddFoul = () => {
   }
   };
 
+export const testHit = () => {
+ return testStrikes - 3, testBalls - 4;
+}; 
 
 function App (){
 
@@ -44,6 +47,16 @@ function App (){
   
   const [balls, setBalls] = useState(0);
 const [strikes, setStrikes] = useState(0);
+const [inning, setInning] = useState(1);
+
+const addInning = () => {
+  if (inning < 9) {
+    setInning(inning + 1)
+  }
+  else if (inning === 9) {
+    setInning(inning - 9)
+  }
+};
 
 const addStrike = () => {
 if( strikes < 3) {
@@ -78,8 +91,8 @@ const addFoul = () => {
     <div className="App">
       <header className="App-header">
      
-           <Display balls={balls} strikes={strikes} />
-           <DashBoard  addStrike ={addStrike} addBall ={addBall} addFoul={addFoul} Hit = {Hit} />
+           <Display balls={balls} strikes={strikes} inning = {inning} />
+           <DashBoard  addStrike ={addStrike} addBall ={addBall} addFoul={addFoul} Hit = {Hit} addInning = {addInning} />
            
        
       </header>

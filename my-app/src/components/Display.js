@@ -12,6 +12,10 @@ return (
             <h1>Balls</h1>
             <h1>{props.balls}</h1>
         </div>
+        <div className="display-Inning">
+            <h1>Inning</h1>
+            <h1>{props.inning}</h1>
+        </div>
         
     </div>
 )
