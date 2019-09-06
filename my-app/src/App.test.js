@@ -4,15 +4,15 @@ import App from './App';
 import Dashboard from "./components/Dashboard";
 import Display from "./components/Display";
 
-import { strikes, setStrikes, balls, setBalls , addStrike, addBall, addFoul, Hit} from './App';
+import { addOne, strikes, setStrikes, balls, setBalls , addStrike, addBall, addFoul, Hit} from './App';
 import expectExport from 'expect';
-  
 
 
 
 
 
-it('renders without crashing', () => {
+
+it('renders without crashing', (props) => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
@@ -24,7 +24,4 @@ test('Dashboard is working', () => {
  ReactDOM.unmountComponentAtNode(div);
 })
 
-test('add strikes is working', () => {
-  expect(1+1).toBe(3)
-  
-})
+

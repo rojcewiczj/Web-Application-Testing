@@ -6,17 +6,36 @@ import DashBoard from "./components/Dashboard"
 
 
 
+export const testBalls = 4
+export const testStrikes = 3;
+export const testAddToStrike = () => {
+  if (testStrikes < 3 ) {
+    return testStrikes + 1
+  }
+
+else if (testStrikes > 2 ){
+ return (testStrikes - 3);
+}
+};
+
+export const testAddToBalls = () => {
+  if (testBalls < 4 ) {
+    return testBalls + 1
+  }
+
+else if (testBalls > 2 ){
+ return (testBalls - 3);
+}
+};
 
 
 
+function App (){
 
 
 
-
-
-
-function App() 
-{const [balls, setBalls] = useState(0);
+  
+  const [balls, setBalls] = useState(0);
 const [strikes, setStrikes] = useState(0);
 
 const addStrike = () => {
