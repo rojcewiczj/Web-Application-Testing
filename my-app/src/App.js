@@ -24,7 +24,7 @@ export const testAddToBalls = () => {
   }
 
 else if (testBalls > 2 ){
- return (testBalls - 3);
+ return (testBalls - 4);
 }
 };
 
